@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <style>
+    * {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  border: border-box;
+}
+
+.navbar {
+  height: 60px;
+  background-color: #0f1111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navlogo {
+  height: 50px;
+  width: 100px;
+}
+
+.logo {
+  background-image: url(https://www.amazon.com/ref=nav_logo);
+  height: 50px;
+  width: 100%;
+  background-size: cover;
+}
+.border {
+  border: 2px solid transparent;
+  border-radius: 2px;
+}
+.border:hover {
+  border: 1.5px solid white;
+}
+
+.addfirst {
+  color: #cccccc;
+  font-size: 12px;
+  margin-left: 16px;
+  align-items: center;
+}
+
+.addsecond {
+  font-size: 14px;
+  margin-left: 3px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.addicon {
+  display: flex;
+  align-items: center;
+}
+
+.border2:hover {
+  border: 1.5px solid white;
+  height: 50px;
+}
+
+.search1 {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  background-color: rgb(255, 52, 52);
+  height: 40px;
+  width: 620px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.nav-search {
+  display: flex;
+  height: 40px;
+  width: 620px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  text-align: center;
+  background-color: #ff8484;
+  margin-left: 15px;
+  border-radius: 4px;
+  justify-content: space-evenly;
+}
+
+.search-option1 {
+  background-color: #f3f3f3;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 50px;
+  text-align: center;
+  border: none;
+}
+
+input {
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+}
+.search-input{
+    border: none;
+}
+.search-icon {
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(238, 156, 4, 0.849);
+  font-size: 1.2rem;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #0f1111;
+}
+
+.lanoption {
+  font-weight: bolder;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+.languageoption {
+  height: 50px;
+  width: 74px;
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+}
+.american {
+  background-image: url(Images/america.webp);
+  background-size: cover;
+  height: 15px;
+  width: 20px;
+}
+
+.hello {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.account-sign {
+  font-size: 14px;
+  font-weight: bold;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+.return {
+  font-size: 12px;
+}
+
+.order {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cart i {
+  font-size: 30px;
+}
+
+.cart {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.nav-search:hover {
+  border: 2px solid orange;
+}
+
+.second-nav {
+  height: 42px;
+  background-color: #222f3d;
+  align-items: center;
+  color: white;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.second-nav p {
+  display: inline;
+}
+
+.allicon {
+  padding-left: 8px;
+  align-items: center;
+  display: flex;
+  width: 58px;
+  height: 36px;
+}
+
+.list {
+  font-weight: 700;
+  margin: 2px;
+  font-size: 14px;
+}
+
+.panel-ops {
+  width: 70%;
+  font-size: 0.8rem;
+}
+
+.ptag {
+  margin-left: 15px;
+}
+.deals {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.main{
+    background-image: url(https://m.media-amazon.com/images/I/81KkrQWEHIL._SX3000_.jpg);
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.msg{
+    font-size: 14px;
+    background-color: #f5f6f6;
+    width: 80%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.msg a {
+    color: #007185;
+    text-decoration: none;
+} 
+
+.shop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+}
+
+.box{
+    height: 400px;
+    width: 23%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin: 8px;
+}
+
+.shop1{
+    font-size: 16px;
+}
+
+.box1-img{
+    height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.box1-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.shop1 p a{
+      text-decoration: none;
+      color: #007185;
+      font-size: 15px;
+}
+
+footer{
+  margin-top: 15px;
+}
+.firstpanel{
+  height: 50px;
+  background-color: #232F3E;
+  color: white;
+  font: 13px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.secondpanel{
+  background-color: #333;
+  color: white;
+  height: 400px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul{
+  margin-top: 20px;
+}
+ul a {
+  display: block;
+  font-size: 14px;
+  margin-top: 15px;
+  color: #dddddd;
+}
+
+.thirdpanel{
+  background-color: #333;
+  color: white;
+  border-top: 0.5px solid #848688;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  background-image: url(https://www.amazon.com/ref=nav_logo);
+  height:50px;
+  width: 100%;
+  background-size: cover;
+  width: 100px;
+}
+
+.select-op{
+  margin-left: 55px;
+  display: flex;
+}
+
+.select-op select{
+  background: transparent;
+  color: #cccccc;
+  font-size: 13px;
+  text-decoration: none;
+  margin-left: 5px;
+  border: 1px solid #848688;
+  padding: 6px 18px 6px 8px;
+  border-radius: 3px;
+}
+
+.panel4{
+  background-color: #333;
+  color: white;
+  height: 80px;
+  font-size: 12px;
+  text-align: center;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+}
+
+.page{
+  text-align: center;
+  padding-top: 25px;
+}
+.page a {
+  text-decoration: none;
+  color: white;
+
+}
+
+.copyright{
+  margin-top: 5px;
+}
+  </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+  <body>
+    
+    <p>Welcome to <%= title %></p>
+    <!-- <img  style="width: 300px;"  src="https://www.jiomart.com/images/product/original/581107371/jiobharat-b1-4g-keypad-phone-with-jiocinema-jiosaavn-jiopay-upi-powerful-battery-2000mah-led-torch-digital-camera-blue-locked-for-jionetwork-digital-o581107371-p605734456-0-202310231102.jpeg?im=Resize=(1000,1000)"alt="">
+    <h1>Price:₹199</h1>
+    <button id="rzp-button1" class="btn col-sm-4 col-sm-offset-1 btn-lg" style="background-color:#fb641b; color:#fff;font-size:1em;"><i class="fa fa-bolt" style="font-size:1.2em;"></i> BUY NOW</button> -->
+    <header>
+      <div class="navbar">
+        <div class="navlogo">
+          <div class="logo border"></div>
+        </div>
+        <div class="navadd border">
+          <p class="addfirst icon" >Deliver to</p>
+          <div class="addicon">
+            <i class="fa-solid fa-location-dot icon"></i>
+            <p class="addsecond icon">India</p>
+          </div>
+        </div>
+        <div class="nav-search">
+            <select class="search-option1">
+                <option value="All" class="search-option2">All</option>
+            </select>
+            <input type="text" placeholder="Search Amazon" class="search-input">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          
+           </div>
+           <div class="languageoption border">
+            <div class="american"></div>
+            <select class="lanoption">
+                <option value="lan">EN</option>
+            </select>
+           </div>
+           <div class="sign border">
+            <p class="hello">
+                Hello, sign in
+            </p>
+            <div class="account">
+              <select class="account-sign">
+                <option value="Account">Account & Lists</option>
+              </select>
+            </div>
+            <div>
+            </div>
+           </div>
+           <div class="box6 border">
+            <p class="return">
+              Returns
+            </p>
+            <p class="order">
+              & Orders
+            </p>
+           </div>
+           <div class="cart border">
+            <i class="fa-solid fa-cart-shopping"></i>
+            cart
+           </div>
+      </div>
+      <div class="second-nav">
+        <div class="allicon border">
+          <i class="fa-solid fa-bars"></i>
+         <p class="list">All</p>
+        </div>
+        <div class="panel-ops">
+          <p class="ptag border">Today's Deals</p>
+          <p class="ptag border">Customer Service</p>
+          <p class="ptag border">Registry</p> 
+          <p class="ptag border">Gift Cards</p>
+          <p class="ptag border"> Sell</p>
+        </div>
+        <div class="deals">
+          <p>Shop deals in Electronics</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main">
+        <div class="msg">
+          <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a href="#">Click here to go to amazon.in</a></p>
+        </div>
+      </div>
+      <div class="shop">
+        <div class="shop1 box">
+          <div class="box1-content">
+            <div class="box1-img" style="background-image: url(https://idm.in/aMoyo2C)"></div>
+      <h1>Price:₹199</h1>
+        <button id="rzp-button1" class="btn col-sm-4 col-sm-offset-1 btn-lg" style="background-color:#fb641b; color:#fff;font-size:1em;"><i class="fa fa-bolt" style="font-size:1.2em;"></i> BUY NOW</button> 
+        </div>
+        </div>
+        <div class="shop2 box">
+          <div class="box1-content">
+            <h2>Deals & Promotions</h2>
+            <div class="box1-img" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_SmartWatch_1X._SY304_CB639922137_.jpg);"></div>
+            <p><a href="#">Shop now</a></p>
+          </div>
+        </div>
+        <div class="shop3 box">
+          <div class="box1-content">
+            <h2>Health & Personal Care</h2>
+            <div class="box1-img" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._SY304_CB627424361_.jpg);"></div>
+            <h1>Price:₹199</h1>
+        <button id="rzp-button1" class="btn col-sm-4 col-sm-offset-1 btn-lg" style="background-color:#fb641b; color:#fff;font-size:1em;"><i class="fa fa-bolt" style="font-size:1.2em;"></i> BUY NOW</button> 
+          </div>
+        </div>
+        <div class="shop4 box">
+          <div class="box1-content">
+            <h2>New arrivals in Toys</h2>
+            <div class="box1-img" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_Toys_1X._SY304_CB639759658_.jpg);"></div>
+            <p><a href="#">Shop now</a></p>
+          </div>
+        </div>        <div class="shop1 box">
+          <div class="box1-content">
+          <h2>For your Fitness Needs</h2>
+          <div class="box1-img" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_Fitness_1X._SY304_CB639748186_.jpg);"></div>
+          <p><a href="#">Shop now</a></p>
+        </div>
+        </div>
+        <div class="shop2 box">
+          <div class="box1-content">
+            <h2>Kindle E readers</h2>
+            <div class="box1-img" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Desktop_Dash_Kindle_1x._SY304_CB639752818_.jpg);"></div>
+            <p><a href="#">Shop now</a></p>
+          </div>
+        </div>
+        <div class="shop3 box">
+          <div class="box1-content">
+            <h2>Home refresh ideas</h2>
+            <div class="box1-img" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/home/THILGMA/SpringEvent2023/XCM_CUTTLE_1559454_3018199_379x304_1X_en_US._SY304_CB592739737_.jpg);"></div>
+            <p><a href="#">Shop now</a></p>
+          </div>
+        </div>
+        <div class="shop4 box">
+          <div class="box1-content">
+            <h2>Shop Laptops & Tablets</h2>
+            <div class="box1-img" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Laptops_379x304_1X_en_US._SY304_CB418608471_.jpg);"></div>
+            <p><a href="#">Shop now</a></p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="firstpanel">
+        Back to top
+      </div>
+      <div class="secondpanel">
+        <ul>
+         <p>Get to Know Us</p>
+         <a>Careers</a>
+         <a>Blog</a>
+         <a>About Amazon</a>
+         <a>Investor Relations</a>
+         <a>Amazon Devices</a>
+         <a>Amazon Science</a>
+        </ul>
+        <ul>
+          <p>Make Money with Us</p>
+          <a>Sell products on Amazon</a>
+          <a>Sell on Amazon Business</a>
+          <a>Sell apps on Amazon</a>
+          <a>Become an Affiliate</a>
+          <a>Self-Publish with Us</a>
+          <a>Host an Amazon Hub</a>
+          <a>›See More Make Money with Us</a>
+         </ul>
+         <ul>
+         <p>Amazon Payment Products</p>
+         <a>Amazon Business Card</a>
+         <a>Shop with Points</a>
+         <a>Reload Your Balance</a>
+         <a>Amazon Currency Converter</a>
+        </ul>
+          <ul>
+          <p>Let Us Help You</p>
+          <a>Amazon and COVID-19</a>
+          <a>Your Account</a>
+          <a>Your Orders</a>
+          <a>Shipping Rates & Policies</a>
+          <a>Returns & Replacements</a>
+          <a>Manage Your Content and Devices</a>
+          <a>Amazon Assistant</a>
+          <a>Help</a>
+         </ul>
+      </div>
+      <div class="thirdpanel">
+        <div class="logo"></div>
+        <div class="select-op">
+        <select name="" id="" class="sele">
+          <option value="En">English</option>
+        </select>
+        <select name="" id="" class="sele">
+          <option value="1">$ USD - U.S. Dollar</option>
+        </select>
+        
+        <select name="" id="" class="sele">
+          <option value="4"> United states</option>
+        </select>
+        </div>
+      </div>
+      <div class="panel4">
+        <div class="page">
+          <a href="">Conditions of Use</a>
+            <a href="">Privacy Notice</a>
+            <a href="">Your Ads Privacy Choices</a>
+        </div>
+        <div class="copyright">
+          © 1996-2023, Amazon.com, Inc. or its affiliates
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    var orderId ;
+$(document).ready(function(){
+    var settings = {
+  "url": "/create/orderId",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({
+    
+  }),
+};
+
+//creates new orderId everytime
+$.ajax(settings).done(function (response) {
+
+  orderId=response.id;
+  console.log(orderId);
+  $("button").show();
+
+
+  var options = {
+    "key": "rzp_test_GRrwMbNTyF1uR8", // Enter the Key ID generated from the Dashboard
+    "amount": response.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "TEJASKAWARKHE",
+    "description": "number one brand",
+    "image": "data:image/jpeg;base64,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",
+    "order_id": response.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        // alert(response.razorpay_payment_id);
+        // alert(response.razorpay_order_id);
+        // alert(response.razorpay_signature)
+
+        var settings1 = {
+  "url": "/api/payment/verify",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({response}),
+}
+$.ajax(settings1).done(function(states){
+  if(states==true){
+    window.location.href='/succes';
+  }else{
+    alert("payment failed!");
+  }
+})
+    },
+    
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+});
+});
+  </script>
+</html>
+
+
+
+
