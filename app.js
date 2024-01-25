@@ -28,7 +28,7 @@ app.use(session({
   saveUninitialized: false,
  cookies:{MaxAge:3*60*60*1000},
   store: MongoStore.create({
-    mongoUrl:'mongodb://127.0.0.1:27017/googleauth',
+    mongoUrl:'mongodb+srv://kawarkhetejas9:tejas@cluster0.t8pp5kg.mongodb.net/?retryWrites=true&w=majority',
     autoRemove:'disabled'
   })
 }));
