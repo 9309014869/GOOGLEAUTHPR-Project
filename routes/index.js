@@ -13,7 +13,7 @@ var instance = new Razorpay({
 passport.use(new GoogleStrategy({
   clientID: process.env['GOOGLE_CLIENT_ID'],
   clientSecret: process.env['GOOGLE_CLIENT_SECRET'],
-  callbackURL: '/oauth2/redirect/google',
+  callbackURL: 'https://tejas-programmerouthtication1.onrender.com',
   scope: [ 'email','profile' ]
 },
 async function verify(issuer, profile, cb) {
